@@ -30,7 +30,7 @@ class Expressions(expression: String) {
         return result
     }
 
-    fun getOperator(operator: String): Operator {
+    private fun getOperator(operator: String): Operator {
         return when (operator) {
             "+" -> Operator.ADD
             "-" -> Operator.SUBTRACT

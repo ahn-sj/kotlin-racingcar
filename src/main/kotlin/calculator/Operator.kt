@@ -2,7 +2,7 @@ package calculator
 
 import java.util.function.BiFunction
 
-enum class Operator(val operation: BiFunction<Double, Double, Double>) {
+enum class Operator(private val operation: BiFunction<Double, Double, Double>) {
     ADD(
         BiFunction { left, right -> left + right },
     ),
