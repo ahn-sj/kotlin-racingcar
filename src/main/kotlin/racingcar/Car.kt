@@ -1,8 +1,8 @@
 package racingcar
 
-class Car {
-    private var distance: Int = 0
-
+class Car(
+    private var distance: Int = 0,
+) {
     fun move() {
         distance++
     }
