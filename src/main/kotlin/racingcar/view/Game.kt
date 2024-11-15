@@ -13,5 +13,12 @@ class Game(
     fun start() {
         val carCount = view.inputView(CAR_VIEW_MESSAGE)
         val tryCount = view.inputView(TRY_VIEW_MESSAGE)
+
+        val racingCars = Cars(List(carCount) { Car() }, RandomMovementHandler(SecureRandomGenerator()))
+
+        for (i in 0 until tryCount) {
+            racingCars.move()
+            racingCars.print()
+        }
     }
 }
