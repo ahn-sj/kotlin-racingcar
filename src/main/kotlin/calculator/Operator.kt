@@ -1,5 +1,6 @@
 package calculator
 
+import calculator.Number.Companion.ZERO
 import java.util.function.BiFunction
 
 enum class Operator(
@@ -21,7 +22,7 @@ enum class Operator(
     DIVIDE(
         "/",
         BiFunction { left, right ->
-            if (right == 0.0) {
+            if (right == ZERO) {
                 throw IllegalArgumentException("0으로 나눌 수 없습니다")
             }
             left / right
