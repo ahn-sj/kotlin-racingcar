@@ -1,4 +1,4 @@
-package racingcar.view
+package racingcar
 
 class RandomMovementHandler(
     private val randomGenerator: RandomGenerator,

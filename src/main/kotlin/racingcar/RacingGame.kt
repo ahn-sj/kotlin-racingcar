@@ -1,5 +1,7 @@
-package racingcar.view
+package racingcar
 
+import racingcar.view.CarInputView
+import racingcar.view.CarOutputView
 import racingcar.view.DisplayConstant.Companion.CAR_VIEW_MESSAGE
 import racingcar.view.DisplayConstant.Companion.TRY_VIEW_MESSAGE
 

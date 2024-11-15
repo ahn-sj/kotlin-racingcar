@@ -1,5 +1,7 @@
 package racingcar.view
 
+import racingcar.Car
+
 class CarOutputView(
     private val output: OutputView,
 ) {

@@ -1,4 +1,4 @@
-package racingcar.view
+package racingcar
 
 class Car {
     private var distance: Int = 0

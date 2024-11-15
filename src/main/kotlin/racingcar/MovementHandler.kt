@@ -1,4 +1,4 @@
-package racingcar.view
+package racingcar
 
 interface MovementHandler {
     fun isMovable(): Boolean
