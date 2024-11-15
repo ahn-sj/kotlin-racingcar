@@ -1,10 +1,14 @@
 package racingcar.view
 
 class Car {
-    var distance: Int = 0
+    private var distance: Int = 0
 
     fun move() {
         distance++
+    }
+
+    fun getDistance(): Int {
+        return distance
     }
 
     companion object {
