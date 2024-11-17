@@ -1,6 +1,7 @@
-package racingcar.view
+package racingcar.view.v1
 
 import racingcar.Car
+import racingcar.view.OutputView
 
 class CarOutputView(
     private val output: OutputView,
