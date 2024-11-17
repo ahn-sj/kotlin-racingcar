@@ -1,5 +1,5 @@
 package racingcar
 
-interface MovementHandler {
+interface MovementChecker {
     fun isMovable(): Boolean
 }

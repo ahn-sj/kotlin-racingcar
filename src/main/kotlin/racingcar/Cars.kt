@@ -2,10 +2,10 @@ package racingcar
 
 class Cars(
     private val cars: List<Car>,
-    private val movementHandler: MovementHandler,
+    private val movementChecker: MovementChecker,
 ) {
     fun move() {
-        cars.filter { movementHandler.isMovable() }
+        cars.filter { movementChecker.isMovable() }
             .forEach { it.move() }
     }
 
