@@ -14,10 +14,8 @@ class RacingGame(
         val tryCount = inputView.inputView(TRY_VIEW_MESSAGE)
 
         val racingCars = Cars(List(carCount) { Car() }, RandomMovementChecker(SecureRandomGenerator()))
+        racingCars.move(tryCount)
 
-        for (i in 0 until tryCount) {
-            racingCars.move()
-        }
         outputView.outputView(racingCars.getCars())
     }
 }
