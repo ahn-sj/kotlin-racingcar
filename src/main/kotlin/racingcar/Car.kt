@@ -12,6 +12,10 @@ class Car(
         distance++
     }
 
+    fun isMovable(number: Int): Boolean {
+        return number >= MOVE_CONDITION
+    }
+
     fun getDisplayDistance(): String {
         return "-".repeat(distance)
     }
@@ -26,5 +30,6 @@ class Car(
 
     companion object {
         private const val MAX_NAME_LENGTH = 5
+        private const val MOVE_CONDITION = 4
     }
 }

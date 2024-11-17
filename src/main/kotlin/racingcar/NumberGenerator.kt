@@ -1,5 +1,5 @@
 package racingcar
 
-interface RandomGenerator {
+interface NumberGenerator {
     fun generate(): Int
 }

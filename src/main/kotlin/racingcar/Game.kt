@@ -10,14 +10,12 @@ fun main() {
     val carNames = inputView.inputCarCount()
     val tryCount = inputView.inputRoundCount()
 
-    val racingCars = Cars.joined(carNames, RandomMovementChecker(SecureRandomGenerator()))
-    val round = Round(tryCount)
-    val game = RacingGame(racingCars, round)
-
-    game.play()
-    val winners = game.getWinners()
+    val game = RacingGame(carNames, Round(tryCount), SecureNumberGenerator())
+    val playedCars = game.play()
+    val winners = playedCars.getWinners()
 
     // output
     val outputView = CarNameOutputView()
-    outputView.outputWinners(winners)
+    val joinedWinners = winners.joinToString(", ") { it.getName() }
+    outputView.outputWinners(joinedWinners)
 }

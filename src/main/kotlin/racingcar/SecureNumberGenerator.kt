@@ -2,7 +2,7 @@ package racingcar
 
 import java.security.SecureRandom
 
-class SecureRandomGenerator : RandomGenerator {
+class SecureNumberGenerator : NumberGenerator {
     override fun generate(): Int {
         val secureRandom = SecureRandom.getInstanceStrong()
         return secureRandom.nextInt(RANDOM_ORIGIN, RANDOM_BOUND)

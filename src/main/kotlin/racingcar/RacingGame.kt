@@ -1,22 +1,18 @@
 package racingcar
 
 class RacingGame(
-    private val cars: Cars,
+    private val carNames: String,
     private val round: Round,
+    private val numberGenerator: NumberGenerator,
 ) {
-    fun play() {
+    fun play(): Cars {
+        val racingCars = Cars.joined(carNames)
+
         while (!round.isFinished()) {
-            cars.move()
-            cars.print()
+            racingCars.move(numberGenerator)
+            racingCars.print()
             round.end()
         }
-    }
-
-    fun getWinners(): String {
-        return cars.getWinners().joinToString(WINNER_NAME_JOINER) { it.getName() }
-    }
-
-    companion object {
-        private const val WINNER_NAME_JOINER = ", "
+        return racingCars
     }
 }
