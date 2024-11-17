@@ -10,8 +10,4 @@ class Car(
     fun getDistance(): Int {
         return distance
     }
-
-    companion object {
-        const val MOVE_CONDITION = 4
-    }
 }
