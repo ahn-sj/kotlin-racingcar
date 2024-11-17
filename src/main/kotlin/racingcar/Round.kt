@@ -15,7 +15,7 @@ data class Round(
         return value == ALL_ROUND_FINISHED
     }
 
-    fun getValue(): Int {
+    fun getRound(): Int {
         return value
     }
 
