@@ -5,7 +5,7 @@ class Car(
     var distance: Int = 0,
 ) {
     init {
-        require(name.length <= MAX_NAME_LENGTH) { "자동차 이름은 5자 이하만 가능합니다." }
+        require(name.length <= MAX_NAME_LENGTH) { "자동차 이름은 5자 이하만 가능합니다. input = $name" }
     }
 
     fun move() {
@@ -18,10 +18,6 @@ class Car(
 
     fun isMaxDistance(max: Int): Boolean {
         return distance == max
-    }
-
-    fun getDisplayDistance(): String {
-        return "-".repeat(distance)
     }
 
     companion object {

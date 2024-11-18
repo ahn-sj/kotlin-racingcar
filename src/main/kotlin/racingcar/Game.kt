@@ -10,7 +10,7 @@ fun main() {
     val carNames = inputView.inputCarCount()
     val tryCount = inputView.inputRoundCount()
 
-    val game = RacingGame(carNames, Round(tryCount), SecureNumberGenerator())
+    val game = RacingGame(Cars.joined(carNames), Round(tryCount), SecureNumberGenerator())
     val playedCars = game.play()
     val winners = playedCars.getWinners()
 

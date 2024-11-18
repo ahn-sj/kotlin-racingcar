@@ -6,8 +6,8 @@ class Cars(val cars: List<Car>) {
             .forEach(Car::move)
     }
 
-    fun print() {
-        cars.forEach { println("${it.name} : ${it.getDisplayDistance()}") }
+    fun print(displaySymbol: String) {
+        cars.forEach { println("${it.name} : ${displaySymbol.repeat(it.distance)}") }
         println()
     }
 

@@ -11,7 +11,7 @@ class RoundTest : StringSpec({
         // when & then
         shouldThrow<IllegalArgumentException> {
             Round(0)
-        }.shouldHaveMessage("라운드는 1 이상이어야 합니다.")
+        }.shouldHaveMessage("라운드는 1 이상이어야 합니다. input = 0")
     }
 
     "Round는 1 이상이면 생성됩니다." {

@@ -8,7 +8,7 @@ class RacingGameTest : StringSpec({
     "RacingGame은 자동차 경주 게임을 진행한다" {
         // given
         val carNames = "pobi,crong,honux"
-        val racingGame = RacingGame(carNames, Round(5), StubNumberGenerator())
+        val racingGame = RacingGame(Cars.joined(carNames), Round(5), StubNumberGenerator())
 
         // when
         val playedCars = racingGame.play()
