@@ -2,6 +2,9 @@ package racingcar
 
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.matchers.shouldBe
+import racingcar.domain.Cars
+import racingcar.domain.RacingGame
+import racingcar.domain.Round
 
 class RacingGameTest : StringSpec({
 

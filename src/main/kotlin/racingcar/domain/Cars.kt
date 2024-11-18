@@ -1,4 +1,4 @@
-package racingcar
+package racingcar.domain
 
 class Cars(val cars: List<Car>) {
     fun move(numberGenerator: NumberGenerator) {
