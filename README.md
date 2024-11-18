@@ -11,6 +11,13 @@
 
 ## 5단계
 
+### 요구사항 분석
+
+- MVC 패턴으로 구현
+  - Model: VO
+  - View: InputView, OutputView
+  - Controller: RacingGame
+- 테스트 가능한 부분과 테스트 하기 힘든 부분을 분리해 테스트 가능한 부분에 대해서만 단위 테스트 진행
 
 
 ---
