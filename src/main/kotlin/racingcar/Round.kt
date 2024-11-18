@@ -4,7 +4,7 @@ data class Round(
     var value: Int,
 ) {
     init {
-        require(value >= MIN_ROUND) { "라운드는 1 이상이어야 합니다." }
+        require(value >= MIN_ROUND) { "라운드는 1 이상이어야 합니다. input = $value" }
     }
 
     fun end() {
