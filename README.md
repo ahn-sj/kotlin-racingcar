@@ -6,10 +6,27 @@
 - 주생성자 부생성자(단점) 정리하기
   - 팩터리 메서드를 권장하는데 사용 방법이 여러가지가 있는듯
 - companion object vs object class in Kotlin 정리하기
+- data class를 적극 사용하기
+- var를 val로 웬만해선 전부 변경하기
+
+## 5단계
+
+
 
 ---
 
 ## 4단계
+
+### 피드백
+
+- 멤버변수의 값을 노출해야 한다면 가시성을 private이 아닌 public으로 변경
+- Car, Cars에 VIEW에 해당하는 정보들에 대해서 어떻게 처리해야할지 고민
+  - ex) Car.getDisplayDistance()."-"
+- kotest 피드백
+  - https://kotest.io/docs/framework/datatesting/data-driven-testing.html
+- 익명함수로 테스트에서 인터페이스를 구현하는 방법 숙지
+
+
 
 ### 요구사항 분석
 
