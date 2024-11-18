@@ -1,23 +1,18 @@
 package racingcar
 
-class Cars(private val cars: List<Car>) {
+class Cars(val cars: List<Car>) {
     fun move(numberGenerator: NumberGenerator) {
         cars.filter { it.isMovable(numberGenerator.generate()) }
             .forEach(Car::move)
     }
 
     fun print() {
-        cars.forEach { println("${it.getName()} : ${it.getDisplayDistance()}") }
+        cars.forEach { println("${it.name} : ${it.getDisplayDistance()}") }
         println()
     }
 
     fun getWinners(): List<Car> {
-        val max = cars.maxOf { it.getDistance() }
-        return cars.filter { it.getDistance() == max }
-    }
-
-    fun getCars(): List<Car> {
-        return cars
+        return cars.filter { it -> it.isMaxDistance(cars.maxOf { it.distance }) }
     }
 
     companion object {

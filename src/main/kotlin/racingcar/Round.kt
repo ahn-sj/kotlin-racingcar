@@ -1,7 +1,7 @@
 package racingcar
 
 data class Round(
-    private var value: Int,
+    var value: Int,
 ) {
     init {
         require(value >= MIN_ROUND) { "라운드는 1 이상이어야 합니다." }
@@ -13,10 +13,6 @@ data class Round(
 
     fun isFinished(): Boolean {
         return value == ALL_ROUND_FINISHED
-    }
-
-    fun getRound(): Int {
-        return value
     }
 
     companion object {

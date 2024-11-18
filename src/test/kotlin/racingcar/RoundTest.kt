@@ -19,7 +19,7 @@ class RoundTest : StringSpec({
         val round = Round(1)
 
         // then
-        round.getRound() shouldBe 1
+        round.value shouldBe 1
     }
 
     "Round의 end는 하나의 라운드가 종료될 때마다 남은 라운드 수를 차감합니다." {
@@ -30,7 +30,7 @@ class RoundTest : StringSpec({
         round.end()
 
         // then
-        round.getRound() shouldBe 2
+        round.value shouldBe 2
     }
 
     "Round의 isFinished는 마지막 라운드가 종료되면 true를 발생합니다." {

@@ -13,7 +13,7 @@ class CarTest : StringSpec({
         car.move()
 
         // then
-        car.getDistance() shouldBe 1
+        car.distance shouldBe 1
     }
 
     "자동차가 움직일 수 없는지 확인한다" {

@@ -16,6 +16,6 @@ fun main() {
 
     // output
     val outputView = CarNameOutputView()
-    val joinedWinners = winners.joinToString(", ") { it.getName() }
+    val joinedWinners = winners.joinToString(", ") { it.name }
     outputView.outputWinners(joinedWinners)
 }

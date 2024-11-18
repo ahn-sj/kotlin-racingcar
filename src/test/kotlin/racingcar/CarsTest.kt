@@ -10,7 +10,7 @@ class CarsTest : StringSpec({
         val cars = Cars(listOf(Car("pobi"), Car("crong")))
 
         // when & then
-        cars.getCars().size shouldBe 2
+        cars.cars.size shouldBe 2
     }
 
     "Cars는 콤마(,)를 기준으로 자동차를 구분하고, 이름을 부여한다." {
@@ -19,9 +19,9 @@ class CarsTest : StringSpec({
         val cars = Cars.joined(carNames)
 
         // when & then
-        cars.getCars().size shouldBe 2
-        cars.getCars().get(0).getName() shouldBe "pobi"
-        cars.getCars().get(1).getName() shouldBe "crong"
+        cars.cars.size shouldBe 2
+        cars.cars.get(0).name shouldBe "pobi"
+        cars.cars.get(1).name shouldBe "crong"
     }
 
     "Cars는 숫자 생성 전략에 의해 움직임이 결정된다" {
@@ -42,7 +42,7 @@ class CarsTest : StringSpec({
 
         // then
         winners.size shouldBe 1
-        winners.get(0).getName() shouldBe "crong"
+        winners.get(0).name shouldBe "crong"
     }
 
     "Cars의 getWinners는 우승자를 출력한다. (다수 우승자)" {
@@ -54,7 +54,7 @@ class CarsTest : StringSpec({
 
         // then
         winners.size shouldBe 2
-        winners.get(0).getName() shouldBe "pobi"
-        winners.get(1).getName() shouldBe "crong"
+        winners.get(0).name shouldBe "pobi"
+        winners.get(1).name shouldBe "crong"
     }
 })
