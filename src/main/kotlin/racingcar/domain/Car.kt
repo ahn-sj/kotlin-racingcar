@@ -1,13 +1,9 @@
 package racingcar.domain
 
 class Car(
-    val name: String,
+    val name: CarName,
     var distance: Int = 0,
 ) {
-    init {
-        require(name.length <= MAX_NAME_LENGTH) { "자동차 이름은 5자 이하만 가능합니다. input = $name" }
-    }
-
     fun move() {
         distance++
     }
@@ -20,8 +16,11 @@ class Car(
         return distance == max
     }
 
+    fun getCarNameValue(): String {
+        return name.value
+    }
+
     companion object {
-        private const val MAX_NAME_LENGTH = 5
         private const val MOVE_CONDITION = 4
     }
 }

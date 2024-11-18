@@ -11,15 +11,13 @@ class Cars(val cars: List<Car>) {
         println()
     }
 
-    fun getWinners(): List<Car> {
-        return cars.filter { it -> it.isMaxDistance(cars.maxOf { it.distance }) }
+    fun getWinners(): Winners {
+        return Winners.from(cars.filter { it -> it.isMaxDistance(cars.maxOf { it.distance }) })
     }
 
     companion object {
-        private const val CAR_NAME_DELIMITER = ","
-
-        fun joined(carNames: String): Cars {
-            return Cars(carNames.split(CAR_NAME_DELIMITER).map { Car(it) })
+        fun joined(carNames: CarNames): Cars {
+            return Cars(carNames.names.map { Car(it) })
         }
     }
 }

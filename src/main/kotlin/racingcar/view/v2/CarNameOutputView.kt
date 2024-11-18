@@ -1,9 +1,10 @@
 package racingcar.view.v2
 
+import racingcar.domain.Winners
+
 class CarNameOutputView {
-    fun outputWinners(winners: String) {
-        require(winners.isNotBlank()) { "우승자는 반드시 존재해야 합니다." }
-        println(winners + WINNER_MESSAGE)
+    fun outputWinners(winners: Winners) {
+        println(winners.winners + WINNER_MESSAGE)
     }
 
     companion object {

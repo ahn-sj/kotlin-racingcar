@@ -26,13 +26,13 @@
 
 ### 피드백
 
-- 멤버변수의 값을 노출해야 한다면 가시성을 private이 아닌 public으로 변경
-- Car, Cars에 VIEW에 해당하는 정보들에 대해서 어떻게 처리해야할지 고민
+- [x] 멤버변수의 값을 노출해야 한다면 가시성을 private이 아닌 public으로 변경
+- [x] Car, Cars에 VIEW에 해당하는 정보들에 대해서 어떻게 처리해야할지 고민
   - ex) Car.getDisplayDistance()."-"
   - ex) Cars.print()
-- kotest 피드백
+- [ ] kotest 피드백
   - https://kotest.io/docs/framework/datatesting/data-driven-testing.html
-- 익명함수로 테스트에서 인터페이스를 구현하는 방법 숙지
+- [ ] 익명함수로 테스트에서 인터페이스를 구현하는 방법 숙지
 
 
 

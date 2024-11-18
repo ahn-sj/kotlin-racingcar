@@ -4,8 +4,7 @@ import java.security.SecureRandom
 
 class SecureNumberGenerator : NumberGenerator {
     override fun generate(): Int {
-        val secureRandom = SecureRandom.getInstanceStrong()
-        return secureRandom.nextInt(RANDOM_ORIGIN, RANDOM_BOUND)
+        return SecureRandom.getInstanceStrong().nextInt(RANDOM_ORIGIN, RANDOM_BOUND)
     }
 
     companion object {
