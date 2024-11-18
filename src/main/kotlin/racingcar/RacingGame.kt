@@ -8,7 +8,7 @@ class RacingGame(
     fun play(): Cars {
         val racingCars = Cars.joined(carNames)
 
-        while (!round.isFinished()) {
+        while (round.isFinished().not()) {
             racingCars.move(numberGenerator)
             racingCars.print()
             round.end()
