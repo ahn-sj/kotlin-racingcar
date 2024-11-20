@@ -11,6 +11,18 @@
 
 ## 5단계
 
+### 피드백
+
+- [x] 가변 프로퍼티(var)를 외부에 공개해야 한다면 setter는 private으로 제한
+```kotlin
+class Car(val name: String) {
+    var position: Int = 0
+        private set
+}
+```
+- 
+
+
 ### 요구사항 분석
 
 - MVC 패턴으로 구현
