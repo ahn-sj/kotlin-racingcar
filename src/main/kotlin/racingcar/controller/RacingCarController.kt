@@ -13,12 +13,16 @@ class RacingCarController(
     private val outputView: CarNameOutputView,
     private val numberGenerator: NumberGenerator,
 ) {
-    private val carNames: String = inputView.inputCarCount()
+    private val carNames: List<String> = inputView.inputCarCount().split(CAR_NAME_DELIMITER)
     private val tryCount: Int = inputView.inputRoundCount()
 
     fun run() {
         val game = RacingGame(Cars.joined(CarNames.from(carNames)), Round(tryCount), numberGenerator)
-        val playedCars = game.play()
-        outputView.outputWinners(playedCars.getWinners())
+        val raceRounds = game.play()
+        outputView.outputWinners(raceRounds)
+    }
+
+    companion object {
+        private const val CAR_NAME_DELIMITER = ","
     }
 }

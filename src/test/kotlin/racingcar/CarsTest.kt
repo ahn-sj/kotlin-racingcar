@@ -26,8 +26,7 @@ class CarsTest : StringSpec({
 
     "Cars는 콤마(,)를 기준으로 자동차를 구분하고, 이름을 부여한다." {
         // given
-        val carNames = "pobi,crong"
-        val cars = Cars.joined(CarNames.from(carNames))
+        val cars = Cars.joined(CarNames.from(listOf("pobi", "crong")))
 
         // when & then
         cars.cars.size shouldBe 2
@@ -37,7 +36,7 @@ class CarsTest : StringSpec({
 
     "Cars는 숫자 생성 전략에 의해 움직임이 결정된다 (4 이상이면 전진)" {
         // given
-        val cars = Cars.joined(CarNames.from("pobi,crong"))
+        val cars = Cars.joined(CarNames.from(listOf("pobi", "crong")))
 
         // when
         cars.move(constant(4))
@@ -49,7 +48,7 @@ class CarsTest : StringSpec({
 
     "Cars는 숫자 생성 전략에 의해 움직임이 결정된다 (4 미만이면 멈춤)" {
         // given
-        val cars = Cars.joined(CarNames.from("pobi,crong"))
+        val cars = Cars.joined(CarNames.from(listOf("pobi", "crong")))
 
         // when
         cars.move(constant(3))
@@ -64,7 +63,7 @@ class CarsTest : StringSpec({
         val cars = Cars(listOf(Car(CarName("pobi"), 1), Car(CarName("crong"), 2)))
 
         // when
-        val winners = cars.getWinners().winners
+        val winners = cars.getWinners()
 
         // then
         winners.size shouldBe 1
@@ -76,7 +75,7 @@ class CarsTest : StringSpec({
         val cars = Cars(listOf(Car(CarName("pobi"), 2), Car(CarName("crong"), 2)))
 
         // when
-        val winners = cars.getWinners().winners
+        val winners = cars.getWinners()
 
         // then
         winners.size shouldBe 2

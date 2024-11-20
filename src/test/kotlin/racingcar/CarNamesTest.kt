@@ -8,7 +8,7 @@ class CarNamesTest : StringSpec({
 
     "자동차 이름은 구분자에 의해 결정된다" {
         // given & when
-        val carNames = CarNames.from("abc,bcd")
+        val carNames = CarNames.from(listOf("abc", "bcd"))
 
         // then
         val names = carNames.names
@@ -18,7 +18,7 @@ class CarNamesTest : StringSpec({
 
     "자동차 이름에 구분자가 없으면 하나의 자동차로 결정된다" {
         // given & when
-        val carNames = CarNames.from("ab-cd")
+        val carNames = CarNames.from(listOf("ab-cd"))
 
         // then
         val names = carNames.names

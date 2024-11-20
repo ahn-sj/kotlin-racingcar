@@ -20,7 +20,8 @@ class Car(val name: String) {
         private set
 }
 ```
-- 
+- [x] domain에 view와 관련된 내용을 분리
+- [x] maxOf 분리
 
 
 ### 요구사항 분석

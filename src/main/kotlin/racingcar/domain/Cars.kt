@@ -1,18 +1,25 @@
 package racingcar.domain
 
-class Cars(val cars: List<Car>) {
+data class Cars(val cars: List<Car>) {
     fun move(numberGenerator: NumberGenerator) {
         cars.filter { it.isMovable(numberGenerator.generate()) }
             .forEach(Car::move)
     }
 
-    fun print(displaySymbol: String) {
-        cars.forEach { println("${it.name} : ${displaySymbol.repeat(it.distance)}") }
-        println()
+    // TODO: 객체 깊은 복사를 다른 방법으로 수정 우쨔,,,,?
+    fun copy(): Cars {
+        return Cars(cars.map { Car(it.name, it.distance) })
     }
 
-    fun getWinners(): Winners {
-        return Winners.from(cars.filter { it -> it.isMaxDistance(cars.maxOf { it.distance }) })
+    fun getWinners(): List<String> {
+        val maxDistance = getMaxDistance()
+        return cars
+            .filter { it.isMaxDistance(maxDistance) }
+            .map { it.name.value }
+    }
+
+    private fun getMaxDistance(): Int {
+        return cars.maxOf { it.distance }
     }
 
     companion object {

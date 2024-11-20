@@ -18,13 +18,12 @@ class RacingGameTest : StringSpec({
 
     "RacingGame은 자동차 경주 게임을 진행한다" {
         // given
-        val carNames = "pobi,crong,honux"
-        val racingGame = RacingGame(Cars.joined(CarNames.from(carNames)), Round(5), constant(5))
+        val racingGame = RacingGame(Cars.joined(CarNames.from(listOf("pobi", "crong", "honux"))), Round(5), constant(5))
 
         // when
         val playedCars = racingGame.play()
 
         // then
-        playedCars.getWinners().winners.size shouldBe 3
+        playedCars.get(0).histories.cars.size shouldBe 3
     }
 })

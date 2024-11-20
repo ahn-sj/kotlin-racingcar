@@ -5,12 +5,14 @@ class RacingGame(
     private val round: Round,
     private val numberGenerator: NumberGenerator,
 ) {
-    fun play(): Cars {
+    fun play(): List<RaceRound> {
+        val raceRounds = mutableListOf<RaceRound>()
+
         while (round.isFinished().not()) {
             cars.move(numberGenerator)
-            cars.print("-")
             round.end()
+            raceRounds.add(RaceRound(round.value, cars.copy()))
         }
-        return cars
+        return raceRounds
     }
 }
